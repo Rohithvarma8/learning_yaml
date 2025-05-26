@@ -40,4 +40,11 @@ managment:
   president: Laporta
   sporting_director: deco
 
+# specifying data typs
+no_of_jersey_sold:  !!int 234567
+# !!float, !!str, !!bool
 
+# defining null
+no_of_priemere_league_trophies: !!null Null # NULL or null, you can use '~' keyword as well
+~: sometimes keys maybe null
+founded_date: !!timesamp 28-11-1899

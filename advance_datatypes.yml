@@ -1,0 +1,59 @@
+# nested maps
+name: Rohith Varma
+role:
+  company: DraftKings
+  position: Site Reliablity Engineer
+
+# pairs: may contains duplicate values
+
+pair example: !!pairs
+  - job: student at Northeastern
+  - job: Intern at DraftKings
+
+# !! set allow you to have unique values
+unique_names: !!set
+  ? Rohith
+  ? Kalyan
+  ? Yashas
+  ? rohith
+
+# can't add Rohith again yaml is case sensitive
+
+# omap - dict
+
+people: !!omap
+  - rohith: 
+      age: 23
+      height: 6ft 0inches 
+  - koushik:
+      age: 25
+      height: 5ft 8inches
+
+# reusing some propeties using anchors
+
+academics: &almameter
+  school: sri chaitanya
+  inter: sri chaitanya
+  undergrad: srkr
+  masters: Null
+
+person1:
+  name: Koushik
+  <<: *almameter
+
+person2:
+  name: Dheeraj
+  <<: *almameter
+
+person3:
+  name: Rohith 
+  <<: *almameter
+  masters: Northeastern
+
+person4:
+  name: Akshath
+  <<: *almameter
+  school: Narayana
+  undergrad: Amritha
+
+
