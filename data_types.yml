@@ -1,0 +1,43 @@
+# you don't have to explicitly provide "" or '' to initialize the value as a string 
+# yaml automatically figures it out 
+team: FC Barcelona
+city: "Barcelona"
+league: 'La Liga'
+year_founded: 1899
+# yml automatically figures out it is an interger
+league_champions: yes # you can use true or false and on or off as boolean values
+# In YAML, the > symbol is called a folded block scalar. 
+# It’s used to write multi-line strings while preserving them as a single-line string in the final output — with newlines folded into spaces.
+team_background: >
+  FC Barcelona, also known simply as Barcelona and familiarly as Barça, is based in Barcelona,
+  Catalonia, Spain. The club was founded in 1899 by a group of Swiss, Catalan, 
+  German, and English footballers led by Joan Gamper.
+# '|' (pipe) maintains the new lines
+club_history: |
+  La Liga - 28
+
+  Copa del Rey - 32
+
+  UEFA Champions League - 5
+# Creating list in two ways
+# Preferred
+famous_players_new:
+  - name: Lionel Andres Messi
+    number: 10
+  - name: Lamine Yamal
+    number: 19
+  - name: Robert Lewandowski
+    number: 9
+  - name: Xavi Hernandez
+    number: 6
+  - name: Andres Iniesta
+    number: 8
+# Not Preferred (less human readable)
+famous_players_old: [Johan Cruff, Ronaldinho, Rivaldo, Carlos Puyol]
+# key contains multiple key-value pairs
+managment:
+  manager: Hansi Flick
+  president: Laporta
+  sporting_director: deco
+
+
